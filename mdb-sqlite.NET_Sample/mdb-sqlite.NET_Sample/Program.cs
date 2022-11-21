@@ -39,11 +39,10 @@ namespace mdb_sqlite.NET_Sample
         {
             try
             {
-                // Initialize AccessExporter
-                AccessExporter exporter = new AccessExporter(@"Path\To\Your\Accesss\test.mdb");
-                exporter.export(@"Path\To\Create\SQLiteDB\new_db.sqlite");
-                // Dispose after use.
-                exporter.Dispose();
+                //AccessExporter exporter = new AccessExporter(@"Path\To\Your\Accesss\test.mdb");
+                //exporter.export(@"Path\To\Create\SQLiteDB\new_db.sqlite");
+                //exporter.Dispose();
+                AccessExporter.AppendTables(@"Path\To\Your\Accesss\test.mdb", @"Path\To\Create\SQLiteDB\new_db.sqlite");
             }
             catch (Exception ex)
             {
